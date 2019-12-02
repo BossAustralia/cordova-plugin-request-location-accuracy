@@ -370,9 +370,8 @@ public class RequestLocationAccuracy extends CordovaPlugin implements
         switch (status.getStatusCode()) {
             case LocationSettingsStatusCodes.SUCCESS:
                       
-                String msg = "All location settings are satisfied. getStatusCode:" + status.getStatusCode() + "";
-                this.cordova.setActivityResultCallback(this);
-                status.startResolutionForResult(this.cordova.getActivity(), REQUEST_CHECK_SETTINGS);
+                String msg = "All location settings are satisfied. getStatusCode:";
+
                 Log.i(TAG, msg);
                 handleSuccess(msg, SUCCESS_SETTINGS_SATISFIED);
                 break;
